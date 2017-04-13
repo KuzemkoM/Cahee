@@ -82,7 +82,8 @@ button {
     margin: auto;
     padding: 0 15px;
     width: 100%;
-    max-width: 1500px;
+    /* max-width: 1500px; */
+	max-width: 1200px;
 }
 
 .row{
@@ -100,7 +101,10 @@ button {
 
 [class^="col"],
 [class*="col"] {
-    /* float: left; */
+	/** Это свойство было закомментировано, но вся сетка строиться на флоатах, так что я его вернула **/
+	
+	
+    float: left; 
     box-sizing: border-box;
     padding: 0 15px;
 
@@ -199,6 +203,7 @@ button {
 }
 
 /*Main-slide*/
+/** Для этого класса стили уже обьявлены выше **/
 .container {
     position: relative;
     background-size: cover;
@@ -206,15 +211,18 @@ button {
     -moz-background-size: cover;
     -ms-background-size: cover;
     -o-background-size: cover;
-    max-width: 1500px;
+    /*max-width: 1500px;*/
+	
     width: 100%;
 }
 
 .main-slide {
     height: 1000px;
     background: #F9F9FC url(../img/bg-1.png) no-repeat center center;
-    padding-left: 135px;
-	padding-right: 300px;
+	/** Эти паддинги не нужны так как у тебя внутри лежит контейнер который центруется **/
+    /*padding-left: 135px;
+	padding-right: 300px;*/
+	
 }
 
 .container header {
@@ -399,12 +407,18 @@ button {
     font-weight: 700;
 }
 
+/** Так как таг а имеет св-во float то он выпадает из потока, поэтому такую ситуацию нужно исключить **/
+.services h2{
+	overflow: hidden;
+}
+
 .services h2 a {
     float: right;
     font-size: 90px;
     color: #fff;
     margin-top: 320px;
-	margin-right: 230px;
+	/* Маргин не нужен и тем болле в пикселях */
+	/*margin-right: 230px;*/
     text-transform: capitalize;
 }
 
@@ -455,7 +469,7 @@ button {
 }
 
 .gall-img-1  {
-	max-width: 840px;
+	//max-width: 840px;
 }
 
 .gall-img-2 {
@@ -464,7 +478,7 @@ button {
 
 .gall-img-4, 
 .gall-img-5 {
-	max-width: 640px;
+	//max-width: 640px;
 }
 
 .gallery .row {
@@ -476,7 +490,7 @@ button {
     padding-right: 40px;
     padding-left: 40px;
     margin-bottom: 115px;
-	margin-right: 15%;
+	/* margin-right: 15%;*/
 }
 
 .btn-gallery:hover {
@@ -561,7 +575,8 @@ button {
 }
 
 .blog .row {
-	padding-right: 220px;
+	/** Не поняла зачем этот падииг, но он тут точно не нужен **/
+	/** padding-right: 220px;**/
     padding-left: 60px;
 	margin-bottom: 40px;
 }
@@ -606,7 +621,8 @@ button {
 .contact {
 	background: url(../img/bg-7.png) no-repeat center center;
 	background-size: cover;
-	padding-left: 130px;
+	/** Не понятный паддинг и в пикселях **/
+	/*padding-left: 130px;*/
 }
 
 .contact-head  {
@@ -695,17 +711,22 @@ footer {
     text-align: left;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	padding-left: 160px;
+	/** padding-left: 160px; **/
 }
 
 footer p {
     display: inline-block;
 	
 }
-footer img {
+/*footer img {
     display: inline-block;
     padding-left: 17%;
     padding-right: 25%;
+}*/
+
+.footer-logo{
+	width: auto;
+	margin: 17px auto;
 }
 
 footer p span {

@@ -32,54 +32,76 @@
 				</ul>
 			</nav>
 		</header>
-		<div class="main-slide-info col-4">
-			<h2>Fresh life</h2>
-			<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-				<button class="btn-get-free" type="button">get free now</button>
+		<!-- если используешь скласс col перед ним всегда должен идти блок с класом row -->
+		<div class="row">
+			<div class="main-slide-info col-4">
+				<h2>Fresh life</h2>
+				<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+					<button class="btn-get-free" type="button">get free now</button>
+			</div>
 		</div>
 		
-			<div class="scroll">
-				<a href="#about-us"><img src="img/scroll.png" alt="scroll"></a>
-			</div>
-			</div>
-</section> 
+		<div class="scroll">
+			<a href="#about-us"><img src="img/scroll.png" alt="scroll"></a>
+		</div>
+	</div>
+</section> <!-- /.main-slide-->
 
-		<section class="about-us">
-			<div class="container">
-				<div class="about-us-info col-5 col-offset-6">
-					<h2><a id="about-us" href="#">About us</a></h2>
-					<p>Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p> 
-					<p>Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
-				</div>
+<section class="about-us">
+	<div class="container">
+		<!-- И опять потерянный row -->
+		<div class="row">
+			<div class="about-us-info col-5 col-offset-6">
+				<h2><a id="about-us" href="#">About us</a></h2>
+				<p>Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p> 
+				<p>Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
 			</div>
-		</section>
+		</div>	
+	</div>
+</section><!-- /.about-us-->
+		
 	<section class="services">
 		<div class="container">
-			<h2><a id="services" href="#">Our Services</a></h2>
-			<div class="service-form col-4 col-offset-1">
-					<button class="service-button">Online Shopping
-						<img src="img/icon-shopping.png" alt="shopping">
-					</button>
-				   <button class="service-button">Quality Product
-						<img src="img/icon-product.png" alt="product">
-				   </button>
-				   <button class="service-button-deliver">Domestic &#38; International<p>Delivery</p>
-						<img src="img/icon-delivery.png" alt="delivery">
-				   </button>
-				   <button class="service-button">Well Organized
-						<img src="img/icon-organize.png" alt="organize">
-				   </button>
-			</div>
+			<!-- h2 блочный и займет 100% ширины блока, тем самый сбвинет кнопки вниз, я его перенесла бы в сетку рядом с кнопками -->
+			<!--<h2><a id="services" href="#">Our Services</a></h2>-->
+			
+			
+			<!-- И опять потерянный row -->
+			<div class="row">
+				<div class="service-form col-4 col-offset-1">
+						<button class="service-button">Online Shopping
+							<img src="img/icon-shopping.png" alt="shopping">
+						</button>
+					   <button class="service-button">Quality Product
+							<img src="img/icon-product.png" alt="product">
+					   </button>
+					   <button class="service-button-deliver">Domestic &#38; International<p>Delivery</p>
+							<img src="img/icon-delivery.png" alt="delivery">
+					   </button>
+					   <button class="service-button">Well Organized
+							<img src="img/icon-organize.png" alt="organize">
+					   </button>
+				</div>
+				<div class="col-6">
+					<h2><a id="services" href="#">Our Services</a></h2>
+				</div>
+			</div>	
 		</div>
-	</section>
+	</section><!-- /.services-->
+	
 	<section class="gallery">
 		<div class="container">
-			<div class="gallery-info col-6 col-offset-2">
-				<h2><a id="gallery" href="#">Gallery</a></h2>
-				<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
+			<!-- И опять потерянный row -->
 			<div class="row">
-				<div class="col-7 gall-img-1">
+				<!-- <div class="gallery-info col-6 col-offset-2"> Так как сетка 12 колоночная, то что бы блоки занимали всю ширину контейнера их сумма должна быть 12-->
+				<div class="gallery-info col-6 col-offset-3">
+					<h2><a id="gallery" href="#">Gallery</a></h2>
+					<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</div>	
+			<div class="row">
+				<!-- <div class="col-7 gall-img-1">  Так как сетка 12 колоночная, то что бы блоки занимали всю ширину контейнера их сумма должна быть 12-->
+				<div class="col-8 gall-img-1">
 					<img src="img/gallery-1.png" alt="elem-1">
 				</div>
 				<div class="col-4 gall-img-2">
@@ -99,80 +121,106 @@
 				</div>
 			</div>
 		<button class="btn-gallery">VIEW MORE</button>
-	</section>
+	</section><!-- /.gallery-->
+	
 <section class="subscribe">
 	<div class="container">
-	<div class="subscribe-info col-6">
-		<h2>Subscribe To Us</h2>
-		<p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p></div>
+	<!-- И опять потерянный row -->
+	<div class="row">
+		<div class="subscribe-info col-6">
+			<h2>Subscribe To Us</h2>
+			<p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+		</div>
+	</div>	<!-- В одной строке не может быть больше чем 12 колонок  -->
+	<div class="row">
 		<form class="subscribe-form col-8">
 			<input class="col-7" type="email" name="email" placeholder="Your email address...">
 			<button class="btn-subscribe">subscribe</button>
 		</form>
-	</div>
-</section>
+	</div>		
+</section><!-- /.subscribe-->
 
-<section class="blog">
+<section class="blog"> <!-- Те же ошибки что и в галлереии -->
 	<div class="container">
-	<div class="blog-info col-5 col-offset-3">
-		<h2><a id="blog" href="#">Blog</a></h2>
-		<p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-	</div>
 		<div class="row">
-		<div class="col-4 blog-post">
-			<img src="img/blog-1.png" alt="img">
-			<img class="post-date" src="img/20-nov.png" alt="img">
-			<div class="post-name">
-			<h6><a href="#">Green Smoothies: Too Much of a Good Thing?</a></h6>
-			<p>By Auskteez - 2 hours ago</p></div>
-		</div>
-		<div class="col-4 blog-post">
-			<img src="img/blog-2.png" alt="img">
-			<img class="post-date" src="img/14-nov.png" alt="img">
-			<div class="post-name">
-			<h6><a href="#">Growing Food and a “Thirst” for Innovation</a></h6>
-			<p>By Auskteez - 3 hours ago</p></div>
-		</div>
-		<div class="col-4 blog-post">
-			<img src="img/blog-3.png" alt="img">
-			<img class="post-date" src="img/10-nov.png" alt="img">
-			<div class="post-name">
-			<h6><a href="#">Pesticides &#38; Food: What You Need to Know</a></h6>
-			<p>By Auskteez - 6 hours ago</p></div>
+			<!--<div class="blog-info col-5 col-offset-3">-->
+			<div class="blog-info col-6 col-offset-3">
+				<h2><a id="blog" href="#">Blog</a></h2>
+				<p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+			</div>
 		</div>	
+		<div class="row">
+			<div class="col-4 blog-post">
+				<img src="img/blog-1.png" alt="img">
+				<img class="post-date" src="img/20-nov.png" alt="img">
+				<div class="post-name">
+				<h6><a href="#">Green Smoothies: Too Much of a Good Thing?</a></h6>
+				<p>By Auskteez - 2 hours ago</p></div>
+			</div>
+			<div class="col-4 blog-post">
+				<img src="img/blog-2.png" alt="img">
+				<img class="post-date" src="img/14-nov.png" alt="img">
+				<div class="post-name">
+				<h6><a href="#">Growing Food and a “Thirst” for Innovation</a></h6>
+				<p>By Auskteez - 3 hours ago</p></div>
+			</div>
+			<div class="col-4 blog-post">
+				<img src="img/blog-3.png" alt="img">
+				<img class="post-date" src="img/10-nov.png" alt="img">
+				<div class="post-name">
+				<h6><a href="#">Pesticides &#38; Food: What You Need to Know</a></h6>
+				<p>By Auskteez - 6 hours ago</p></div>
+			</div>	
 		</div>
-	<button class="btn-blog">VIEW MORE</button>
+		<button class="btn-blog">VIEW MORE</button>
 	</div>
-</section>
+</section><!-- /.blog-->
 
 <section class="contact">
 	<div class="container">
-		<div class="contact-head col-4 col-offset-3">
-			<h2><a id="contact" href="#">Contact</a></h2>
-			<p>For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
-		</div>
-	<div class="row">
-		<form class="contact-form col-4">
-			<input type="name" name="Auskteez" placeholder="Auskteez Tran">
-			<input type="email" name="email" placeholder="Your email...">
-			<input type="number" name="phone" placeholder="Your phone number...">
-			<textarea placeholder="Your messge..."></textarea>
+		<!-- Все таже история с row -->
+		<div class="row">
+			<div class="contact-head col-6 col-offset-3"> <!-- что бы надпись была по центру -->
+			<!-- <div class="contact-head col-4 col-offset-3">-->
+				<h2><a id="contact" href="#">Contact</a></h2>
+				<p>For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
+			</div>
+		</div>	
+		<div class="row">
+			<form class="contact-form col-4">
+				<input type="name" name="Auskteez" placeholder="Auskteez Tran">
+				<input type="email" name="email" placeholder="Your email...">
+				<input type="number" name="phone" placeholder="Your phone number...">
+				<textarea placeholder="Your messge..."></textarea>
 			</form>
-	<div class="contacts col-4">
-		<h5>ADDRESS</h5>
-		<p>123 City name, Street, City, Country</p>
-		<h5>EMAIL</h5>
-		<p>cahee@domain.com</p>
-		<h5>PHONE</h5>
-		<p>+012 345 6789</p>
+			<div class="contacts col-4"> <!-- телефоны и емейлы должны быть ссылками -->
+				<h5>ADDRESS</h5>
+				<p>123 City name, Street, City, Country</p>
+				<h5>EMAIL</h5>
+				<p>cahee@domain.com</p>
+				<h5>PHONE</h5>
+				<p>+012 345 6789</p>
+			</div>
 		</div>
-	</div></div>
-</section>
+	</div>
+</section><!-- /.contact-->
 
 	<footer>
-	<p>&#169; 2015 Company. All right reserved.</p>
-	<img src="img/logo-foot.png" alt="logo-footer">
-	<p>Made with <span>love</span> by Auskteez</p>
+		<!-- Просто добавим контейнер как и по всему сайту -->
+		<div class="container">
+			<!-- Колонки добавила наугад, так как под рукой нет макета -->
+			<div class="row">
+				<div class="col-4">
+					<p>&#169; 2015 Company. All right reserved.</p>
+				</div>
+				<div class="col-4">
+					<img class="footer-logo" src="img/logo-foot.png" alt="logo-footer">
+				</div>
+				<div class="col-4 text-right">	
+					<p>Made with <span>love</span> by Auskteez</p>
+				</div>
+			</div>		
+		</div>	
 	</footer>
 
 </body>
